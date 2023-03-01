@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230127191958">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230301133755">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +26,11 @@
 				</div>
 			</div>
 		</header>
-		<main class="page"> <br>
+		<main class="page">
 			<div class="page__header third-step">
 				<div class="third-step__container">
 					<h1 class="third-step__title title title--fz48">Перевірте та підтвердіть замовлення</h1>
-					<div class="third-step__body">
+					<form action="#" class="third-step__body">
 						<div class="third-step__column">
 							<div class="third-step__steps steps">
 								<div class="steps__delivery steps__delivery--green"><svg>
@@ -170,10 +170,10 @@
 									<div class="summary-cart__label-summary">До оплати:</div>
 									<div class="summary-cart__value-summary">1598 грн</div>
 								</div>
-								<a href="buy-step3.html" class="summary-cart__button-buy button button--green">Оплатити<svg>
+								<button type="submit" class="summary-cart__button-buy button button--green">Оплатити<svg>
 										<use xlink:href="img/icons/icons.svg#svg-arrow"></use>
 									</svg>
-								</a>
+								</button>
 								<div class="summary-cart__coupon coupon-summary">
 									<div class="coupon-summary__text">Введіть промокод (якщо є)</div>
 									<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="" class="coupon-summary__input input">
@@ -188,29 +188,30 @@
 								<div class="edit-step__region">Харківська область</div>
 								<div class="edit-step__city">м. Харків</div>
 								<div class="edit-step__department">Відділення НП № 67</div>
-								<button type="button" class="edit-step__button">Змінити</button>
+								<a href="buy-step2.html" class="edit-step__back-step2"><svg>
+										<use xlink:href="img/icons/icons.svg#svg-arrow"></use>
+									</svg>Повернутися назад</a>
 							</div>
 							<div class="edit-step__column">
 								<h4 class="edit-step__title title title--fz20">Спосіб доставки</h4>
 								<div class="checkbox">
-									<input checked id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<input disabled checked id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_1" class="checkbox__label"><span class="checkbox__text">У відділення Нової
 											пошти</span></label>
 								</div>
-								<button type="button" class="edit-step__button">Змінити</button>
+
 							</div>
 							<div class="edit-step__column">
 								<h4 class="edit-step__title title title--fz20">Спосіб оплати</h4>
 								<div class="checkbox">
-									<input checked id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<input disabled checked id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 									<label for="c_2" class="checkbox__label"><span class="checkbox__text">Оплата банківською
 											карткою <br><span class="checkbox__second-text">Visa, MasterCard, Maestro, електронні
 												гаманці, Google Pay та Apple Pay</span></span></label>
 								</div>
-								<button type="button" class="edit-step__button">Змінити</button>
 							</div>
 						</div>
-					</div>
+					</form>
 
 				</div>
 			</div>
@@ -224,7 +225,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230127191958"></script>
+	<script src="js/app.min.js?_v=20230301133755"></script>
 </body>
 
 </html>

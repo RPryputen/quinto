@@ -321,7 +321,9 @@ textarea.input {
 }
 
 .method-deliv-form__options .options,
-.method-pay-form__options .options {
+.method-pay-form__options .options,
+.personal-info-account__options .options,
+.step-pay-form__options .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,18 +337,24 @@ textarea.input {
 }
 
 .method-deliv-form__options .options__item,
-.method-pay-form__options .options__item {
+.method-pay-form__options .options__item,
+.personal-info-account__options .options__item,
+.step-pay-form__options .options__item {
   position: relative;
   cursor: pointer;
 }
 
 .method-deliv-form__options .options__item:not(:last-child),
-.method-pay-form__options .options__item:not(:last-child) {
+.method-pay-form__options .options__item:not(:last-child),
+.personal-info-account__options .options__item:not(:last-child),
+.step-pay-form__options .options__item:not(:last-child) {
   margin-bottom: 0.3125em;
 }
 
 .method-deliv-form__options .options__input,
-.method-pay-form__options .options__input {
+.method-pay-form__options .options__input,
+.personal-info-account__options .options__input,
+.step-pay-form__options .options__input {
   width: 0;
   height: 0;
   opacity: 0;
@@ -354,14 +362,18 @@ textarea.input {
 }
 
 .method-deliv-form__options .options__input:checked + .options__label:after,
-.method-pay-form__options .options__input:checked + .options__label:after {
+.method-pay-form__options .options__input:checked + .options__label:after,
+.personal-info-account__options .options__input:checked + .options__label:after,
+.step-pay-form__options .options__input:checked + .options__label:after {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
 
 .method-deliv-form__options .options__label,
-.method-pay-form__options .options__label {
+.method-pay-form__options .options__label,
+.personal-info-account__options .options__label,
+.step-pay-form__options .options__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,7 +385,9 @@ textarea.input {
 }
 
 .method-deliv-form__options .options__label:before,
-.method-pay-form__options .options__label:before {
+.method-pay-form__options .options__label:before,
+.personal-info-account__options .options__label:before,
+.step-pay-form__options .options__label:before {
   content: "";
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -387,7 +401,9 @@ textarea.input {
 }
 
 .method-deliv-form__options .options__label:after,
-.method-pay-form__options .options__label:after {
+.method-pay-form__options .options__label:after,
+.personal-info-account__options .options__label:after,
+.step-pay-form__options .options__label:after {
   content: "";
   -webkit-box-flex: 0;
       -ms-flex: 0 0 6px;
@@ -407,7 +423,9 @@ textarea.input {
 }
 
 .method-deliv-form__options .options__text,
-.method-pay-form__options .options__text {
+.method-pay-form__options .options__text,
+.personal-info-account__options .options__text,
+.step-pay-form__options .options__text {
   margin-top: -0.25rem;
 }
 
@@ -1422,6 +1440,7 @@ body::after {
   top: 1.25rem;
   right: 1.25rem;
   opacity: 0.85;
+  outline: none;
 }
 
 .popup__close::before,
@@ -4688,9 +4707,8 @@ body::after {
 .edit-step {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
   -ms-grid-columns: (auto)[3];
   grid-template-columns: repeat(3, auto);
   row-gap: 1.25rem;
@@ -4704,6 +4722,22 @@ body::after {
 
 .edit-step__title:not(:last-child) {
   margin-bottom: 0.9375rem;
+}
+
+.edit-step__back-step2 {
+  font-family: "FuturaLightC";
+  font-size: 0.875rem;
+  line-height: 1.0714285714;
+  text-decoration-line: underline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-step__back-step2 svg {
+  height: 0.625rem;
+  width: 0.3125rem;
+  margin-right: 0.3125rem;
 }
 
 .edit-step__name:not(:last-child),
@@ -5169,6 +5203,16 @@ body::after {
   margin-bottom: 0.9375rem;
 }
 
+.personal-info-account__options .options__item {
+  font-size: 1rem;
+  line-height: 1.125;
+  color: #1C1C1C;
+}
+
+.personal-info-account__options .options__item:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
 .personal-info-account__action {
   font-family: "FuturaLightC";
   font-size: 0.75rem;
@@ -5184,6 +5228,23 @@ body::after {
 .personal-info-account__mail {
   font-size: 1rem;
   line-height: 1.125;
+  color: #1C1C1C;
+}
+
+.personal-info-account__name[disabled],
+.personal-info-account__phone[disabled],
+.personal-info-account__mail[disabled] {
+  background: none;
+  font-size: 1rem;
+  line-height: 1.125;
+  color: #1C1C1C;
+}
+
+.personal-info-account__name:focus,
+.personal-info-account__phone:focus,
+.personal-info-account__mail:focus {
+  text-decoration: underline;
+  outline: none;
 }
 
 .personal-info-account__name:not(:last-child),
@@ -5197,6 +5258,23 @@ body::after {
 .personal-info-account__department {
   font-size: 1rem;
   line-height: 1.125;
+  color: #1C1C1C;
+}
+
+.personal-info-account__region[disabled],
+.personal-info-account__city[disabled],
+.personal-info-account__department[disabled] {
+  background: none;
+  font-size: 1rem;
+  line-height: 1.125;
+  color: #1C1C1C;
+}
+
+.personal-info-account__region:focus,
+.personal-info-account__city:focus,
+.personal-info-account__department:focus {
+  text-decoration: underline;
+  outline: none;
 }
 
 .personal-info-account__region:not(:last-child),
@@ -6222,9 +6300,9 @@ body::after {
   }
 
   .edit-step {
-    -webkit-column-gap: 5.3125rem;
-       -moz-column-gap: 5.3125rem;
-            column-gap: 5.3125rem;
+    -webkit-column-gap: 3.125rem;
+       -moz-column-gap: 3.125rem;
+            column-gap: 3.125rem;
   }
 
   .company-tabs__text p:not(:last-child) {
@@ -11132,24 +11210,24 @@ body::after {
     }
 }
 
-@supports ((-moz-column-gap: clamp( 1.25rem , -39.375rem  +  65vw , 5.3125rem )) or (column-gap: clamp( 1.25rem , -39.375rem  +  65vw , 5.3125rem ))) {
+@supports ((-moz-column-gap: clamp( 1.25rem , -17.5rem  +  30vw , 3.125rem )) or (column-gap: clamp( 1.25rem , -17.5rem  +  30vw , 3.125rem ))) {
     .edit-step {
-      -webkit-column-gap: clamp( 1.25rem , -39.375rem  +  65vw , 5.3125rem );
-         -moz-column-gap: clamp( 1.25rem , -39.375rem  +  65vw , 5.3125rem );
-              column-gap: clamp( 1.25rem , -39.375rem  +  65vw , 5.3125rem );
+      -webkit-column-gap: clamp( 1.25rem , -17.5rem  +  30vw , 3.125rem );
+         -moz-column-gap: clamp( 1.25rem , -17.5rem  +  30vw , 3.125rem );
+              column-gap: clamp( 1.25rem , -17.5rem  +  30vw , 3.125rem );
     }
 }
 
-@supports not ((-moz-column-gap: clamp( 1.25rem , -39.375rem  +  65vw , 5.3125rem )) or (column-gap: clamp( 1.25rem , -39.375rem  +  65vw , 5.3125rem ))) {
+@supports not ((-moz-column-gap: clamp( 1.25rem , -17.5rem  +  30vw , 3.125rem )) or (column-gap: clamp( 1.25rem , -17.5rem  +  30vw , 3.125rem ))) {
     .edit-step {
       -webkit-column-gap: calc(
-				1.25rem + 4.0625 * (100vw - 62.5rem) / 6.25
+				1.25rem + 1.875 * (100vw - 62.5rem) / 6.25
 			);
          -moz-column-gap: calc(
-				1.25rem + 4.0625 * (100vw - 62.5rem) / 6.25
+				1.25rem + 1.875 * (100vw - 62.5rem) / 6.25
 			);
               column-gap: calc(
-				1.25rem + 4.0625 * (100vw - 62.5rem) / 6.25
+				1.25rem + 1.875 * (100vw - 62.5rem) / 6.25
 			);
     }
 }

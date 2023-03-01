@@ -6723,6 +6723,56 @@
         }
         new StarRating("[data-rating]");
         new StarRating("[data-rating2]");
+        const input1 = document.getElementById("inputDisabledOff1");
+        const input2 = document.getElementById("inputDisabledOff2");
+        const input3 = document.getElementById("inputDisabledOff3");
+        const input4 = document.getElementById("inputDisabledOff4");
+        const input5 = document.getElementById("inputDisabledOff5");
+        const input6 = document.getElementById("inputDisabledOff6");
+        const enableButton = document.getElementById("enableButton");
+        const disableButton = document.getElementById("buttonDisabled");
+        const enableButton2 = document.getElementById("enableButton2");
+        const disableButton2 = document.getElementById("buttonDisabled2");
+        disableButton.addEventListener("click", (function() {
+            input1.removeAttribute("disabled");
+            input2.removeAttribute("disabled");
+            input3.removeAttribute("disabled");
+            input1.style.backgroundColor = "ghostwhite";
+            input2.style.backgroundColor = "ghostwhite";
+            input3.style.backgroundColor = "ghostwhite";
+            disableButton.style.display = "none";
+            enableButton.style.display = "inline";
+        }));
+        enableButton.addEventListener("click", (function() {
+            input1.setAttribute("disabled", true);
+            input2.setAttribute("disabled", true);
+            input3.setAttribute("disabled", true);
+            input1.style.backgroundColor = "transparent";
+            input2.style.backgroundColor = "transparent";
+            input3.style.backgroundColor = "transparent";
+            disableButton.style.display = "inline";
+            enableButton.style.display = "none";
+        }));
+        disableButton2.addEventListener("click", (function() {
+            input4.removeAttribute("disabled");
+            input5.removeAttribute("disabled");
+            input6.removeAttribute("disabled");
+            input4.style.backgroundColor = "ghostwhite";
+            input5.style.backgroundColor = "ghostwhite";
+            input6.style.backgroundColor = "ghostwhite";
+            disableButton2.style.display = "none";
+            enableButton2.style.display = "inline";
+        }));
+        enableButton2.addEventListener("click", (function() {
+            input4.setAttribute("disabled", true);
+            input5.setAttribute("disabled", true);
+            input6.setAttribute("disabled", true);
+            input4.style.backgroundColor = "transparent";
+            input5.style.backgroundColor = "transparent";
+            input6.style.backgroundColor = "transparent";
+            disableButton2.style.display = "inline";
+            enableButton2.style.display = "none";
+        }));
         window["FLS"] = true;
         isWebp();
         menuInit();

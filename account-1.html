@@ -6,13 +6,13 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230127191958">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230301133755">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="show-all-options">
 	<div class="wrapper">
 		<header data-scroll="100" class="header">
 			<div class="header__top-inf top-inf">
@@ -204,56 +204,78 @@
 						<div class="personal-info-account__column">
 							<div class="personal-info-account__body">
 								<h3 class="personal-info-account__title title title--futurac16">Персональні дані</h3>
-								<button type="button" class="personal-info-account__action">Ред. <svg>
+								<button id="buttonDisabled" type="button" class="personal-info-account__action">Ред. <svg>
 										<use xlink:href="img/icons/icons.svg#edit"></use>
 									</svg>
 								</button>
 							</div>
-							<div class="personal-info-account__name">Еліна М</div>
-							<div class="personal-info-account__phone">+380 97 777 77 77</div>
-							<div class="personal-info-account__mail">e@mail.com</div>
-						</div>
-						<div class="personal-info-account__column">
-							<div class="personal-info-account__body">
-								<h3 class="personal-info-account__title title title--futurac16">Адреса доставки</h3>
-								<button type="button" class="personal-info-account__action">Ред. <svg>
-										<use xlink:href="img/icons/icons.svg#edit"></use>
-									</svg>
-								</button>
-							</div>
-							<div class="personal-info-account__region">Харківська область</div>
-							<div class="personal-info-account__city">м. Харків</div>
-							<div class="personal-info-account__department">Відділення НП № 67</div>
+							<form action="#" class="personal-info-account__form-credentials">
+								<input id="inputDisabledOff1" disabled class="personal-info-account__name" placeholder="ім'я" value="Еліна М" type="text" required></input>
+								<input id="inputDisabledOff2" disabled class="personal-info-account__phone" placeholder="Номер телефону" value="+380 97 777 77 77" required type="phone"></input>
+								<input id="inputDisabledOff3" disabled class="personal-info-account__mail" placeholder="Ваш емейл" value="e@mail.com" type="email" required></input>
+								<button type="submit" id="enableButton" style="width: 100%;text-align: left; display: none; text-decoration: underline; font-size: 16px;">Зберегти</button>
+							</form>
 						</div>
 						<div class="personal-info-account__column">
 							<div class="personal-info-account__body">
 								<h3 class="personal-info-account__title title title--futurac16">Основний спосіб доставки</h3>
-								<button type="button" class="personal-info-account__action">Ред. <svg>
+								<!-- <button id="showOptionsBtn" type="button" class="personal-info-account__action">Ред. <svg>
 										<use xlink:href="img/icons/icons.svg#edit"></use>
 									</svg>
-								</button>
+								</button> -->
 							</div>
-							<div class="checkbox">
-								<input id="c_1" checked data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-								<label for="c_1" class="checkbox__label"><span class="checkbox__text">У відділення Нової
-										пошти</span></label>
+							<div class="personal-info-account__options options">
+								<div class="options__item">
+									<input id="o_1" class="options__input" checked type="radio" value="1" name="option">
+									<label for="o_1" class="options__label"><span class="options__text">Кур'єром
+											Укрпошти</span></label>
+								</div>
+								<div class="options__item">
+									<input id="o_2" class="options__input" type="radio" value="2" name="option">
+									<label for="o_2" class="options__label"><span class="options__text">Кур'єром Нової
+											пошти</span></label>
+								</div>
+								<div class="options__item">
+									<input id="o_3" class="options__input" type="radio" value="3" name="option">
+									<label for="o_3" class="options__label"><span class="options__text">У відділення
+											Укрпошти</span></label>
+								</div>
+								<div class="options__item">
+									<input id="o_4" class="options__input" type="radio" value="4" name="option">
+									<label for="o_4" class="options__label"><span class="options__text">У відділення
+											Нової
+											пошти</span></label>
+								</div>
 							</div>
 						</div>
 						<div class="personal-info-account__column">
 							<div class="personal-info-account__body">
-								<h3 class="personal-info-account__title title title--futurac16">Побажання та переваги</h3>
-								<button type="button" class="personal-info-account__action">Ред. <svg>
+								<h3 class="personal-info-account__title title title--futurac16">Адреса доставки</h3>
+								<button id="buttonDisabled2" type="button" class="personal-info-account__action">Ред. <svg>
 										<use xlink:href="img/icons/icons.svg#edit"></use>
 									</svg>
 								</button>
 							</div>
+							<form action="#" class="personal-info-account__form-adress">
+								<input class="personal-info-account__region" id="inputDisabledOff4" disabled placeholder="Область" value="Харківська область" type="text" required></input>
+								<input class="personal-info-account__city" id="inputDisabledOff5" disabled placeholder="Мiсто" value="м. Харків" type="text" required></input>
+								<input class="personal-info-account__department" id="inputDisabledOff6" disabled placeholder="Відділеня" value="Відділення НП № 67" type="text" required></input>
+								<button type="submit" id="enableButton2" style="width: 100%;text-align: left; display: none; text-decoration: underline; font-size: 16px;">Зберегти</button>
+							</form>
+						</div>
+						<div class="personal-info-account__column">
+							<div class="personal-info-account__body">
+								<h3 class="personal-info-account__title title title--futurac16">Побажання та переваги</h3>
+							</div>
 							<div class="checkbox">
 								<input checked id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-								<label for="c_2" class="checkbox__label"><span class="checkbox__text">Не дзвонити по телефону</span></label>
+								<label for="c_2" class="checkbox__label"><span class="checkbox__text">Не дзвонити по
+										телефону</span></label>
 							</div>
 							<div class="checkbox">
 								<input checked id="c_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-								<label for="c_3" class="checkbox__label"><span class="checkbox__text">Повідомляти про знижки в телеграм</span></label>
+								<label for="c_3" class="checkbox__label"><span class="checkbox__text">Повідомляти про знижки в
+										телеграм</span></label>
 							</div>
 						</div>
 					</div>
@@ -400,7 +422,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230127191958"></script>
+	<script src="js/app.min.js?_v=20230301133755"></script>
 </body>
 
 </html>
