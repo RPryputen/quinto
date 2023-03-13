@@ -398,6 +398,184 @@
 					</div>
 				</div>
 			</section>
+						<div id="signin" aria-hidden="true" class="popup signin">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<button data-close type="button" class="popup__close"></button>
+						<div class="popup__body">
+							<h1 class="popup__title title title--fz25">Увійдіть або створіть обліковий запис</h1>
+							<div class="popup__actions actions-popup">
+								<a href="#signin" class="actions-popup__signin">Увійти</a>
+								<a href="#signup" class="actions-popup__signup">Створити обліковий запис</a>
+							</div>
+							<form action="#" class="popup__form" method="GET">
+								<input data-placeholder-nohide autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введіть номер телефону" class="popup__input input">
+								<button type="button" class="popup__button button button--green">Отримати код СМС</button>
+								<button type="button" class="popup__button button button--darkblue">Увійти через Facebook акаунт</button>
+								<div class="checkbox">
+									<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Погоджуюся із правилами
+											магазину</span></label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="signup" aria-hidden="true" class="popup signup">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<button data-close type="button" class="popup__close"></button>
+						<div class="popup__body">
+							<h1 class="popup__title title title--fz25">Увійдіть або створіть обліковий запис</h1>
+							<div class="popup__actions actions-popup">
+								<a href="#signin" class="actions-popup__signin">Увійти</a>
+								<a href="#signup" class="actions-popup__signup">Створити обліковий запис</a>
+							</div>
+							<form action="#" class="popup__form" method="GET">
+								<input data-placeholder-nohide autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ваше ім’я" class="popup__input input">
+								<input data-placeholder-nohide autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введіть номер телефону" class="popup__input input">
+								<button type="button" class="popup__button button button--green">Отримати код СМС</button>
+								<button type="button" class="popup__button button button--darkblue">Увійти через Facebook акаунт</button>
+								<div class="checkbox">
+									<input id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_2" class="checkbox__label"><span class="checkbox__text">Погоджуюся із правилами
+											магазину</span></label>
+								</div>
+							</form>
+							<div data-popup="#noreg" class="popup__noreg"><a href="#" class="popup__link">Зробити замовлення без
+									реєстрації</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="noreg" aria-hidden="true" class="popup noreg">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<button data-close type="button" class="popup__close"></button>
+						<div class="popup__body">
+							<h1 class="popup__title title title--fz25">Швидке замовлення</h1>
+							<div class="popup__text">Заповніть форму заявки і наш менеджер звяжеться з Вами в найближчий термін</div>
+							<form action="#" class="popup__form" method="GET">
+								<input data-placeholder-nohide autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ваше ім’я" class="popup__input input">
+								<input data-placeholder-nohide autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введіть номер телефону" class="popup__input input">
+								<button data-popup="#thanks" type="button" class="popup__button button button--green">Купити</button>
+								<div class="checkbox">
+									<input id="c_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_3" class="checkbox__label"><span class="checkbox__text">Погоджуюся із правилами
+											магазину</span></label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="thanks" aria-hidden="true" class="popup thanks">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<button data-close type="button" class="popup__close"></button>
+						<div class="popup__body">
+							<div class="popup__agree">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#agree"></use>
+								</svg>
+							</div>
+							<h1 class="popup__title title title--fz25">Дякуємо!</h1>
+							<div class="popup__text">Замовлення оформлено, наш менеджер звяжеться з Вами в найближчий термін.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="incart" aria-hidden="true" class="popup incart">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<button data-close type="button" class="popup__close"></button>
+						<div class="popup__body">
+							<div class="popup__agree">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#agree"></use>
+								</svg>
+							</div>
+							<h1 class="popup__title title title--fz25">Товар у кошику!</h1>
+							<div class="popup__buttons">
+								<button type="button" class="popup__button button button--green">Оформити замовлення</button>
+								<button type="button" class="popup__button button button--white">Продовжити покупки</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="testimonial" aria-hidden="true" class="popup testimonial-pop">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<button data-close type="button" class="popup__close"></button>
+						<div class="popup__body">
+							<h1 class="popup__title title title--fz25">Залишити відгук</h1>
+							<div class="popup__text">Заповніть форму з відгуком або побажанням, щоб опубликувати його на сайті</div>
+							<form action="#" class="popup__form" method="GET">
+								<input data-placeholder-nohide autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ваше ім’я" class="popup__input input">
+								<input data-placeholder-nohide autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Номер телефону" class="popup__input input">
+								<div class="popup__quality-title">Оцінка якості</div>
+								<div class="popup__checkbox-quality checkbox">
+									<input id="a_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="a_1" data-rating class="checkbox__label checkbox__label--first"><span class="checkbox__text"></span></label>
+									<input id="a_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="a_2" data-rating class="checkbox__label"><span class="checkbox__text"></span></label>
+									<input id="a_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="a_3" data-rating class="checkbox__label"><span class="checkbox__text"></span></label>
+									<input id="a_4" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="a_4" data-rating class="checkbox__label"><span class="checkbox__text"></span></label>
+									<input id="a_5" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="a_5" data-rating class="checkbox__label checkbox__label--last"><span class="checkbox__text"></span></label>
+								</div>
+								<div class="popup__size-title">Відповідність розміру</div>
+								<div class="options">
+									<div class="options__item">
+										<input id="w_1" class="options__input" checked type="radio" value="1" name="option">
+										<label for="w_1" class="options__label options__label--first"><span class="options__text">маленький</span></label>
+									</div>
+									<div class="options__item">
+										<input id="w_2" class="options__input" type="radio" value="2" name="option">
+										<label for="w_2" class="options__label"><span class="options__text"></span></label>
+									</div>
+									<div class="options__item">
+										<input id="w_3" checked class="options__input" type="radio" value="3" name="option">
+										<label for="w_3" class="options__label"><span class="options__text"></span></label>
+									</div>
+									<div class="options__item">
+										<input id="w_4" class="options__input" type="radio" value="4" name="option">
+										<label for="w_4" class="options__label"><span class="options__text"></span></label>
+									</div>
+									<div class="options__item">
+										<input id="w_5" class="options__input" type="radio" value="5" name="option">
+										<label for="w_5" class="options__label options__label--last"><span class="options__text">великий</span></label>
+									</div>
+								</div>
+								<div class="popup__style-title">Оцінка стилю</div>
+								<div class="popup__checkbox-style checkbox">
+									<input id="r_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="r_1" data-rating2 class="checkbox__label checkbox__label--first"><span class="checkbox__text"></span></label>
+									<input id="r_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="r_2" data-rating2 class="checkbox__label"><span class="checkbox__text"></span></label>
+									<input id="r_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="r_3" data-rating2 class="checkbox__label"><span class="checkbox__text"></span></label>
+									<input id="r_4" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="r_4" data-rating2 class="checkbox__label"><span class="checkbox__text"></span></label>
+									<input id="r_5" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="r_5" data-rating2 class="checkbox__label checkbox__label--last"><span class="checkbox__text"></span></label>
+								</div>
+								<textarea placeholder="Ваш відгук" name="textarea" class="popup__textarea-testimonial textarea"></textarea>
+								<button type="button" class="popup__button button button--blue">Відправити</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container content-footer">
